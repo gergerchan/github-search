@@ -1,0 +1,86 @@
+@import "./abstracts/";
+@import "./page/";
+@import "./components/";
+body {
+  font-family: $primary-font;
+}
+
+.error-message {
+  color: red;
+}
+
+.subtitle {
+  opacity: 0.7;
+}
+
+.img-preview {
+  max-width: 226px;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+p {
+  margin: 0;
+}
+
+.background-mandiri {
+  background-image: url("/images/mandiri-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center; /* Center the image */
+  background-size: 100%; /* Resize the background image to cover the entire container */
+  background-attachment: fixed;
+}
+.bmri {
+  &-background {
+    display: block;
+    position: relative;
+  }
+
+  &-background::after {
+    content: "";
+    background: url("/images/mandiri-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center; /* Center the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    background-attachment: fixed;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  &-link:hover,
+  &-link {
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+.bmri-white-background {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.content-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+.img-fluid-full {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 575.98px) {
+  h1 {
+    font-size: 32px;
+  }
+}

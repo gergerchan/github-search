@@ -1,0 +1,136 @@
+.gthb {
+  &-user {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 3rem;
+    &-head {
+      background-color: $grey;
+      padding: 5px 10px;
+      font-weight: 700;
+      &__link {
+        display: inline;
+        color: $white;
+        text-decoration: none;
+      }
+      &__link:hover {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: underline;
+      }
+    }
+
+    &-profile {
+      width: 15%;
+      margin-right: 2rem;
+      &__picture {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &-repo {
+      width: 85%;
+      padding-left: 2rem;
+      border-left: 1px solid rgba(0, 0, 0, 0.5);
+      &__card {
+        padding: 15px;
+        margin-bottom: 1.5rem;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        box-shadow: 0px 10px 21px -7px rgba(0, 0, 0, 0.18);
+        -webkit-box-shadow: 0px 10px 21px -7px rgba(0, 0, 0, 0.18);
+        -moz-box-shadow: 0px 10px 21px -7px rgba(0, 0, 0, 0.18);
+        &-id {
+          padding: 3px 0px;
+          font-size: 13px;
+          opacity: 0.7;
+          margin-right: 1rem;
+        }
+        &-badge {
+          font-size: 12px;
+          padding: 3px 15px;
+          background-color: $grey;
+          color: $white;
+          border-radius: 2rem;
+          font-weight: 700;
+        }
+        &-date {
+          opacity: 0.8;
+          font-size: 14px;
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+        &-name {
+          font-size: 24px;
+        }
+      }
+      &__card {
+        cursor: pointer;
+      }
+
+      &__paging {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &-control {
+          margin-bottom: 1rem;
+          &-button {
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: $grey;
+            color: $white;
+            font-weight: 700;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+          &-button:hover {
+            cursor: pointer;
+            background-color: $black;
+            color: $white;
+          }
+        }
+        &-paging {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .gthb {
+    &-user {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 1rem;
+      flex-direction: column;
+
+      &-profile {
+        width: 100%;
+        margin-right: none;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+        &__picture {
+          border-radius: 50%;
+          width: 100%;
+          height: auto;
+        }
+      }
+      &-repo {
+        width: 100%;
+        padding-left: 0px;
+        border-left: none;
+        margin-top: 1rem;
+        &__card {
+          padding: 15px;
+          margin-bottom: 1.5rem;
+          border: 2px solid rgba(0, 0, 0, 0.2);
+          border-radius: 10px;
+          box-shadow: 0px 10px 21px -7px rgba(0, 0, 0, 0.18);
+          -webkit-box-shadow: 0px 10px 21px -7px rgba(0, 0, 0, 0.18);
+          -moz-box-shadow: 0px 10px 21px -7px rgba(0, 0, 0, 0.18);
+        }
+      }
+    }
+  }
+}
